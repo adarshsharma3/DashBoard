@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import { Sidebar } from './components/layout/Sidebar';
 import { MainContent } from './common/MainContent';
 
 function App() {
