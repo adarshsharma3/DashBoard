@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { OverviewSection } from './OverviewSection';
-import { OptimizationToolsSection } from './OptimizationToolsSection';
 
 export const Dashboard = () => {
   const [dashboardData, setDashboardData] = useState(null);
@@ -36,30 +34,11 @@ export const Dashboard = () => {
     );
   }
 
-  if (error) {
-    return (
-      <div className="flex-1 flex items-center justify-center">
-        <div className="text-center">
-          <div className="text-red-600 text-lg font-medium">{error}</div>
-          <button
-            onClick={() => window.location.reload()}
-            className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
-          >
-            Retry
-          </button>
-        </div>
-      </div>
-    );
-  }
 
-  if (!dashboardData) {
-    return null;
-  }
 
   return (
     <main className="flex-1 p-6 space-y-8">
-      <OverviewSection data={dashboardData.overview} />
-      <OptimizationToolsSection data={dashboardData.optimization} />
+     
     </main>
   );
 };
